@@ -34,9 +34,9 @@ YOU DO NOT NEED TO MODIFY THE HTML FOR THIS EXERCISE
 
 .flex-split img {
  /* 1: Add width set to 100% so that the images take up their full space */
-
+   width: 100%;
  /* 2. Also, set the aspect ratio to 2 /1 using the property - aspect-ratio: 2 / 1; */
-
+    aspect-ratio: 2 / 1;
  /* Object fit cover helps make sure our image displays properly */
  object-fit: cover;
 }
@@ -45,7 +45,6 @@ YOU DO NOT NEED TO MODIFY THE HTML FOR THIS EXERCISE
 
   3. Add a media query that targets the screen and
   activates beyond a minimum width of 750px
-
   hint: min-width: 750px
 
   Inside that media query, redeclare flex-split
@@ -61,7 +60,19 @@ YOU DO NOT NEED TO MODIFY THE HTML FOR THIS EXERCISE
 
 
 /* Add step 3 here */
+@media (min-width: 750px) {
+  .flex-split {
+    display: flex;
+  }
 
+  .flex-split > * {
+    width: 50%;
+  }
+
+  .flex-split > * + * {
+    margin-left: 2rem;
+  }
+}
 
 
 /*
